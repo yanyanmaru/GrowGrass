@@ -5,9 +5,12 @@ import SwiftUI
 @main
 struct GrowGrassApp: App {
     var body: some Scene {
-        MenuBarExtra("Sample", systemImage: "star.fill") {
-            MenuView()
+        WindowGroup{
+            ContentView()
         }
-        .menuBarExtraStyle(.window)
+//        MenuBarExtra("Sample", systemImage: "star.fill") {
+//            MenuView()
+//        }
+//        .menuBarExtraStyle(.window)
     }
 }

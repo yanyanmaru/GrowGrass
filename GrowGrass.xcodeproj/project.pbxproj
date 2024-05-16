@@ -12,6 +12,8 @@
 		5BF5C5A62BF59BF5006B2F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF5C5A52BF59BF5006B2F69 /* Assets.xcassets */; };
 		5BF5C5A92BF59BF5006B2F69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF5C5A82BF59BF5006B2F69 /* Preview Assets.xcassets */; };
 		5BF5C5B02BF59C36006B2F69 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5C5AF2BF59C36006B2F69 /* MenuView.swift */; };
+		5BF5C5B32BF5A716006B2F69 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 5BF5C5B22BF5A716006B2F69 /* SwiftSoup */; };
+		5BF5C5BE2BF5B82F006B2F69 /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5C5BD2BF5B82F006B2F69 /* Practice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,7 @@
 		5BF5C5A52BF59BF5006B2F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BF5C5A82BF59BF5006B2F69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5BF5C5AF2BF59C36006B2F69 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		5BF5C5BD2BF5B82F006B2F69 /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF5C5B32BF5A716006B2F69 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +59,7 @@
 			children = (
 				5BF5C5A12BF59BF3006B2F69 /* GrowGrassApp.swift */,
 				5BF5C5A32BF59BF3006B2F69 /* ContentView.swift */,
+				5BF5C5BD2BF5B82F006B2F69 /* Practice.swift */,
 				5BF5C5AF2BF59C36006B2F69 /* MenuView.swift */,
 				5BF5C5A52BF59BF5006B2F69 /* Assets.xcassets */,
 				5BF5C5A72BF59BF5006B2F69 /* Preview Content */,
@@ -86,6 +91,9 @@
 			dependencies = (
 			);
 			name = GrowGrass;
+			packageProductDependencies = (
+				5BF5C5B22BF5A716006B2F69 /* SwiftSoup */,
+			);
 			productName = GrowGrass;
 			productReference = 5BF5C59E2BF59BF3006B2F69 /* GrowGrass.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 5BF5C5952BF59BF3006B2F69;
+			packageReferences = (
+				5BF5C5B12BF5A716006B2F69 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = 5BF5C59F2BF59BF3006B2F69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF5C5BE2BF5B82F006B2F69 /* Practice.swift in Sources */,
 				5BF5C5A42BF59BF3006B2F69 /* ContentView.swift in Sources */,
 				5BF5C5B02BF59C36006B2F69 /* MenuView.swift in Sources */,
 				5BF5C5A22BF59BF3006B2F69 /* GrowGrassApp.swift in Sources */,
@@ -279,7 +291,6 @@
 				DEVELOPMENT_TEAM = QF9PGZ7CNK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -311,7 +322,6 @@
 				DEVELOPMENT_TEAM = QF9PGZ7CNK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -354,6 +364,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5BF5C5B12BF5A716006B2F69 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5BF5C5B22BF5A716006B2F69 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5BF5C5B12BF5A716006B2F69 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5BF5C5962BF59BF3006B2F69 /* Project object */;
 }
