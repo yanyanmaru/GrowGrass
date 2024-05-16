@@ -5,65 +5,58 @@ import SwiftSoup
 
 @main
 struct GrowGrassApp: App {
-    @State private var isAlternateIcon: Bool = false
     @State private var link: String = "何だろうね"
     
     
     var body: some Scene {
         MenuBarExtra {
-            VStack {
-                Text("MenuBarExtra Content")
-                Button("Toggle Icon") {
-                    fetchData()
-                    isAlternateIcon.toggle()
-                }
+            Button("水をあげる") {
+                fetchData()
             }
+            
             .padding()
         } label: {
-            if isAlternateIcon {
-                if link == "1"{
-                    let image: NSImage = {
-                            let ratio = $0.size.height / $0.size.width
-                            $0.size.height = 25
-                            $0.size.width = 25 / ratio
-                            return $0
-                        }(NSImage(named: "first")!)
-
-                        Image(nsImage: image)
-                }else if link == "2" {
-                    let image: NSImage = {
-                            let ratio = $0.size.height / $0.size.width
-                            $0.size.height = 25
-                            $0.size.width = 25 / ratio
-                            return $0
-                        }(NSImage(named: "second")!)
-
-                        Image(nsImage: image)
-                }else if link == "3" {
-                    let image: NSImage = {
-                            let ratio = $0.size.height / $0.size.width
-                            $0.size.height = 25
-                            $0.size.width = 25 / ratio
-                            return $0
-                        }(NSImage(named: "third")!)
-
-                        Image(nsImage: image)
-                }else if link == "4" {
-                    let image: NSImage = {
-                            let ratio = $0.size.height / $0.size.width
-                            $0.size.height = 25
-                            $0.size.width = 25 / ratio
-                            return $0
-                        }(NSImage(named: "fourth")!)
-
-                        Image(nsImage: image)
-                }else {
-                    Image(systemName: "star")
-                }
+            
+            if link == "1"{
+                let image: NSImage = {
+                    let ratio = $0.size.height / $0.size.width
+                    $0.size.height = 25
+                    $0.size.width = 25 / ratio
+                    return $0
+                }(NSImage(named: "firstnew")!)
                 
-            } else {
-                Text("link")
+                Image(nsImage: image)
+            }else if link == "2" {
+                let image: NSImage = {
+                    let ratio = $0.size.height / $0.size.width
+                    $0.size.height = 25
+                    $0.size.width = 25 / ratio
+                    return $0
+                }(NSImage(named: "secondnew")!)
+                
+                Image(nsImage: image)
+            }else if link == "3" {
+                let image: NSImage = {
+                    let ratio = $0.size.height / $0.size.width
+                    $0.size.height = 25
+                    $0.size.width = 25 / ratio
+                    return $0
+                }(NSImage(named: "thirdnew")!)
+                
+                Image(nsImage: image)
+            }else if link == "4" {
+                let image: NSImage = {
+                    let ratio = $0.size.height / $0.size.width
+                    $0.size.height = 25
+                    $0.size.width = 25 / ratio
+                    return $0
+                }(NSImage(named: "fourthnew")!)
+                
+                Image(nsImage: image)
+            }else {
+                Image(systemName: "oilcan")
             }
+            
         }
         
     }
