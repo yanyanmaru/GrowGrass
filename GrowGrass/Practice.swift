@@ -11,6 +11,7 @@ struct PracticeView: View {
                 Text(title)
                     .font(.largeTitle)
                     .padding()
+                Image("first")
 
                 List(links, id: \.self) { link in
                     Text(link)
