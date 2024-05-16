@@ -77,8 +77,12 @@ struct GrowGrassApp: App {
                 let html = String(data: data, encoding: .utf8) ?? ""
                 let document = try SwiftSoup.parse(html)
                 
+                let dateFormatter = DateFormatter()
+                                dateFormatter.dateFormat = "yyyy-MM-dd"
+                                let today = dateFormatter.string(from: Date())
+                
                 // Fetch links
-                if let linkElement = try document.select("td[data-date=2024-05-16]").first() {
+                if let linkElement = try document.select("td[data-date=\(today)]").first() {
                     let link = try linkElement.attr("data-level")
                     DispatchQueue.main.async {
                         self.link = link
