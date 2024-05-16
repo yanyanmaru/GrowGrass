@@ -11,6 +11,7 @@
 		5BF5C5A42BF59BF3006B2F69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5C5A32BF59BF3006B2F69 /* ContentView.swift */; };
 		5BF5C5A62BF59BF5006B2F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF5C5A52BF59BF5006B2F69 /* Assets.xcassets */; };
 		5BF5C5A92BF59BF5006B2F69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF5C5A82BF59BF5006B2F69 /* Preview Assets.xcassets */; };
+		5BF5C5B02BF59C36006B2F69 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF5C5AF2BF59C36006B2F69 /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		5BF5C5A32BF59BF3006B2F69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5BF5C5A52BF59BF5006B2F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BF5C5A82BF59BF5006B2F69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5BF5C5AF2BF59C36006B2F69 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				5BF5C5A12BF59BF3006B2F69 /* GrowGrassApp.swift */,
 				5BF5C5A32BF59BF3006B2F69 /* ContentView.swift */,
+				5BF5C5AF2BF59C36006B2F69 /* MenuView.swift */,
 				5BF5C5A52BF59BF5006B2F69 /* Assets.xcassets */,
 				5BF5C5A72BF59BF5006B2F69 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BF5C5A42BF59BF3006B2F69 /* ContentView.swift in Sources */,
+				5BF5C5B02BF59C36006B2F69 /* MenuView.swift in Sources */,
 				5BF5C5A22BF59BF3006B2F69 /* GrowGrassApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +279,7 @@
 				DEVELOPMENT_TEAM = QF9PGZ7CNK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -287,6 +292,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nanami.GrowGrass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -304,6 +311,7 @@
 				DEVELOPMENT_TEAM = QF9PGZ7CNK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -316,6 +324,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nanami.GrowGrass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
