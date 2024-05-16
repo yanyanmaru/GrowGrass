@@ -10,11 +10,14 @@ struct GrowGrassApp: App {
     
     var body: some Scene {
         MenuBarExtra {
-            Button("水をあげる") {
-                fetchData()
-            }
-            
-            .padding()
+            VStack {
+                            Text("今日の日付: \(link)")
+                                .padding()
+                            Button("水をあげる") {
+                                fetchData()
+                            }
+                            .padding()
+                        }
         } label: {
             
             if link == "1"{
@@ -82,7 +85,7 @@ struct GrowGrassApp: App {
                                 let today = dateFormatter.string(from: Date())
                 
                 // Fetch links
-                if let linkElement = try document.select("td[data-date=\(today)]").first() {
+                if let linkElement = try document.select("td[data-date=2024-05-17]").first() {
                     let link = try linkElement.attr("data-level")
                     DispatchQueue.main.async {
                         self.link = link
@@ -93,5 +96,6 @@ struct GrowGrassApp: App {
             }
         }.resume()
     }
+    
 }
 
