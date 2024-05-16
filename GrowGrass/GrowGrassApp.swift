@@ -32,7 +32,7 @@ struct GrowGrassApp: App {
                     $0.size.height = 25
                     $0.size.width = 25 / ratio
                     return $0
-                }(NSImage(named: "secondnew")!)
+                }(NSImage(named: "thirdnew")!)
                 
                 Image(nsImage: image)
             }else if link == "3" {
@@ -41,7 +41,7 @@ struct GrowGrassApp: App {
                     $0.size.height = 25
                     $0.size.width = 25 / ratio
                     return $0
-                }(NSImage(named: "thirdnew")!)
+                }(NSImage(named: "fourthnew")!)
                 
                 Image(nsImage: image)
             }else if link == "4" {
@@ -50,7 +50,7 @@ struct GrowGrassApp: App {
                     $0.size.height = 25
                     $0.size.width = 25 / ratio
                     return $0
-                }(NSImage(named: "fourthnew")!)
+                }(NSImage(named: "fifthnew")!)
                 
                 Image(nsImage: image)
             }else {
