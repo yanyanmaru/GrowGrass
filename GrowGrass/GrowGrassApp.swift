@@ -10,14 +10,11 @@ struct GrowGrassApp: App {
     
     var body: some Scene {
         MenuBarExtra {
-            VStack {
-                            Text("今日の日付: \(link)")
-                                .padding()
-                            Button("水をあげる") {
-                                fetchData()
-                            }
-                            .padding()
-                        }
+            Button("水をあげる") {
+                fetchData()
+            }
+            
+            .padding()
         } label: {
             
             if link == "1"{
@@ -70,6 +67,9 @@ struct GrowGrassApp: App {
             return
         }
         
+        var request = URLRequest(url: url)
+        request.cachePolicy = .reloadIgnoringLocalCacheData
+        
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data, error == nil else {
                 print("Error fetching data: \(error?.localizedDescription ?? "Unknown error")")
@@ -81,21 +81,22 @@ struct GrowGrassApp: App {
                 let document = try SwiftSoup.parse(html)
                 
                 let dateFormatter = DateFormatter()
-                                dateFormatter.dateFormat = "yyyy-MM-dd"
-                                let today = dateFormatter.string(from: Date())
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                let today = dateFormatter.string(from: Date())
                 
-                // Fetch links
-                if let linkElement = try document.select("td[data-date=2024-05-17]").first() {
+                let selector = "td[data-date='\(today)']"
+                if let linkElement = try document.select(selector).first() {
                     let link = try linkElement.attr("data-level")
                     DispatchQueue.main.async {
                         self.link = link
                     }
+                } else {
+                    print("Element not found with selector: \(selector)")
                 }
             } catch {
                 print("Error parsing HTML: \(error.localizedDescription)")
             }
         }.resume()
     }
-    
 }
 
